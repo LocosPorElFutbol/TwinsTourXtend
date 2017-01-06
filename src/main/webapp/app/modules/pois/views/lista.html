@@ -1,0 +1,87 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Pois</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class ="navbar-header">
+      <p class="navbar-text">Welcome to the Jungle: {{listadoController.usuario}}, los pois vinieron para ayudarte</p>
+      <button class="btn navbar-btn pull-right btn-sm btn-success" type="submit" ng-click="listadoController.logout()">Logout</button>
+    </div>
+  </div>
+</nav>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Listado de Pois</div>
+      <!-- /.panel-heading -->
+      <div class="panel-body">
+
+        <form ng-submit="listadoController.agregar()">
+          <div class="row">
+            <div class="col-xs-6">
+            <table class="table table-bordered">
+              <thead>
+              <tr>
+                <th>Buscar palabras</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr ng-repeat="palabra in listadoController.palabras">
+                <td>{{palabra}}<button type="button" class="close" ng-click="listadoController.delete(palabra)">&times;</button></td>
+              </tr>
+              </tbody>
+            </table>
+            </div>
+            
+            <div class="col-xs-6">
+            <div class="row">
+              <div class="md-form">
+              <input type="text" id="inputTexto" class="form-control" ng-model="listadoController.palabra">
+              <label for="inputTexto" class="">Ingrese palabra</label>
+              </div>
+
+              <button id="btnAgregar" class="btn btn-primary btn-sm" ng-click="listadoController.agregar()">Agregar</button>
+              <button id="btnBuscar" class="btn btn-primary btn-sm" ng-click="listadoController.buscar()">Buscar</button>
+              <button id="btnLimpiar" class="btn btn-primary btn-sm" ng-click="listadoController.limpiar()">Limpiar</button>
+
+            </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="row" >
+          <div class="col-lg-12">
+            <h4 class="card-header">Resultados B&uacute;squeda</h4>
+
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Direcci&oacute;n</th>
+                  <th>Favorito</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="poi in listadoController.pois" ui-sref="main.mostrar_modal({ id: poi.id })">
+                  <td>{{ poi.nombre }}</td>
+                  <td>{{ poi.direccion }}</td>
+                  <td>{{ modalPoiController.usuarioIncluido}}</td>
+        
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+ 
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+  <div class="row">
+    <div class="col-sm-4"></div>
+	<div class="col-sm-4">
+		<div class="card animated bounce">
+		
+		<div class="card-block">
+			
+			<div class="text-xs-center">
+				<h3><i class="fa fa-lock"></i> Iniciar sesi&oacute;n</h3>
+				<hr class="m-t-2 m-b-2">
+			</div>
+			
+			<div class="md-form">
+				<i class="fa fa-user prefix"></i>
+				<input type="text" id="form2" class="form-control" ng-model="logincontroller.usuario">
+				<label for="form2">Ingrese usuario</label>
+			</div>
+			<div class="md-form">
+				<i class="fa fa-lock prefix"></i>
+				<input type="password" id="form4" class="form-control" ng-model="logincontroller.password">
+				<label for="form4">Ingrese password</label>
+			</div>
+
+			<div class="text-xs-center">
+			<!--<form action="http://localhost:3000/prueba">-->
+			    <button class="btn btn-primary btn-sm" type=submit ng-click="logincontroller.login()">Aceptar</button>
+			<!--</form>-->
+			</div>
+
+		</div>
+		
+		</div>
+	</div>
+	<div class="col-sm-4"></div>
+  </div>
+ 

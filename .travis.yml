@@ -1,0 +1,19 @@
+language: java
+
+jdk:
+  - oraclejdk8  
+
+install: mvn install -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
+script: mvn test -Dmaven.compiler.target=1.8 -Dmaven.compiler.source=1.8
+
+notifications:
+  email:
+    recipients:
+      -tec.lrodriguez@gmail.com
+      -juanpablocenturion@yahoo.com.ar
+      -melinamazzeo93@gmail.com
+      -santiago_salvatelli@hotmail.com
+      -tdeluermoz@est.frba.utn.edu.ar
+
+    on_success: [change] 
+    on_failure: [always] 

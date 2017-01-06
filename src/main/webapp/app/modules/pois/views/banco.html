@@ -1,0 +1,21 @@
+<div class="form-group">
+    <label>Direccion</label>
+    <input class="form-control" ng-model="modalPoiController.poi.direccion">
+</div>
+<div class="form-group">
+    <label>Barrio</label>
+    <input class="form-control" ng-model="modalPoiController.poi.barrio">
+</div>
+
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Nombre Servicio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="s in modalPoiController.poi.servicios">
+                  <td>{{ s.nombreServicio }}</td>
+                </tr>
+              </tbody>
+            </table>

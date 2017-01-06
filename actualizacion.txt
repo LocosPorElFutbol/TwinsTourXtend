@@ -1,0 +1,6 @@
+Donia Florinda;golosinas;escolares
+El cuadernito de Tito;              
+Esta es una linea que debria ignorar
+
+Carrousel;  colegio   escolar     uniformes modas
+114;parada colectivo

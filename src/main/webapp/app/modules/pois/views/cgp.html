@@ -1,0 +1,25 @@
+<div class="form-group">
+    <label>Comuna</label>
+    <input class="form-control" ng-model="modalPoiController.poi.numeroDeComuna">
+</div>
+
+<div class="form-group">
+    <label>Direccion</label>
+    <input class="form-control" ng-model="modalPoiController.poi.direccion">
+</div>
+
+<table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Nombre Servicio</th>
+                  <th>Horario Servicio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="s in modalPoiController.poi.servicios">
+                  <td>{{ s.nombreServicio }}</td>
+                  <td>{{ s.listaHorarios }}</td>  
+                </tr>
+              </tbody>
+            </table>
+
